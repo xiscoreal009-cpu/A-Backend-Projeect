@@ -3,10 +3,9 @@
 
 import dotenv from 'dotenv'
 import connectDB from "./db/index.js";
+import {app} from "./app.js"
+dotenv.config()
 
-dotenv.config({
-  path: './.env'
-})
 connectDB()
 .then(()=>{
   app.listen(process.env.PORT || 8000,()=>{
@@ -17,7 +16,7 @@ connectDB()
 .catch((error)=>{
   console.log("connection error",error)
 })
-
+console.log("ENV CHECK:", process.env.MONGODB_URI);
      
 
 
