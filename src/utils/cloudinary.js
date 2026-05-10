@@ -20,3 +20,4 @@ resource_type: "auto",
   return null
 }
 }
+export {uploadOnCloudinary}
